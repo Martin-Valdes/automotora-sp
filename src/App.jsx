@@ -1,8 +1,8 @@
-import ItemListContainer from "./components/itemListContainer/ItemListContainer"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import HomeContainer from "./components/HomeContainer/HomeContainer"
-import ContactoContainer from "./components/contactoContainer/ContactoContainer"
-import FinanciacionContainer from "./components/financiacionContainer/FinanciacionContainer"
-import NavBar from "./components/navBar/NavBar"
+import ContactoContainer from "./components/ContactoContainer/ContactoContainer"
+import FinanciacionContainer from "./components/FinanciacionContainer/FinanciacionContainer"
+import NavBar from "./components/NavBar/NavBar"
 import { BrowserRouter,Routes, Route, Navigate } from "react-router-dom"
 
 
