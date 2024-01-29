@@ -1,7 +1,8 @@
 .navBar{
     background-color: black;
     display: flex;
-    height: 6.25rem;
+    justify-content: space-between;
+    height: auto;
     align-items: center;
     padding: 1.25rem;
     color: white;
@@ -9,12 +10,17 @@
         width: 5rem;
         height: 5rem;
         border-radius: 3.125rem;
-
     }
     .navUl{
+        margin-right: 3.125rem;
         list-style: none;
         display: flex;
         gap:20px;
+        li{
+            a{ color: white;
+                text-decoration: none;
+            }
+        }
         
     }
 }
