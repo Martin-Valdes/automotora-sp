@@ -1,7 +1,7 @@
 // import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
-import HomeContainer from "./components/HomeContainer/HomeContainer"
+// import HomeContainer from "./components/HomeContainer/HomeContainer"
 // import ContactoContainer from "./components/ContactoContainer/ContactoContainer"
-import FinanciacionContainer from "./components/FinanciacionContainer/FinanciacionContainer"
+// import FinanciacionContainer from "./components/FinanciacionContainer/FinanciacionContainer"
 import NavBar from "./components/NavBar/NavBar"
 import { BrowserRouter,Routes, Route, Navigate } from "react-router-dom"
 
