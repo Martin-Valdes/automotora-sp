@@ -1,4 +1,4 @@
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import HomeContainer from "./components/HomeContainer/HomeContainer"
 import ContactoContainer from "./components/ContactoContainer/ContactoContainer"
 import FinanciacionContainer from "./components/FinanciacionContainer/FinanciacionContainer"
@@ -13,7 +13,7 @@ function App() {
       <div>
         <NavBar/>
         <Routes>
-        <Route path="/" element = {<HomeContainer/>}/>
+          <Route path="/" element = {<HomeContainer/>}/>
           <Route path="autos/autos" element ={<ItemListContainer/>} />
           <Route path="financiacion" element = {<FinanciacionContainer/>}/>
           <Route path="contacto" element = {<ContactoContainer/>}/>
