@@ -27,4 +27,4 @@ const ItemLisContainer = () => {
 
 }
 
-export default ItemLisContainer
+export default ItemListContainer
