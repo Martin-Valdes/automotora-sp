@@ -26,4 +26,4 @@ jobs:
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build
-          server-dir: /home/u349402418/domains/automotora-prueba.com/public_html
+          server-dir: /home/u349402418/domains/pcblink.com.uy/public_html
