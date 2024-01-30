@@ -1,4 +1,4 @@
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
 import HomeContainer from "./components/HomeContainer/HomeContainer"
 import ContactoContainer from "./components/ContactoContainer/ContactoContainer"
 import FinanciacionContainer from "./components/FinanciacionContainer/FinanciacionContainer"
@@ -20,8 +20,6 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
-  
-    
   )
 }
 export default App
