@@ -6,7 +6,7 @@ import ItemList from "../ItemList/ItemList";
 
 import "./itemListContainer.scss"
 
-const ItemLisContainer = () => {
+const ItemListContainer = () => {
 
     const [car, setCar] = useState([]);
     
