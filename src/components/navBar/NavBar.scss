@@ -10,6 +10,7 @@
         width: 5rem;
         height: 5rem;
         border-radius: 3.125rem;
+        margin-left: 1.875rem ;
     }
     .navUl{
         margin-right: 3.125rem;
@@ -17,8 +18,10 @@
         display: flex;
         gap:20px;
         li{
-            a{ color: white;
+            a{ 
+                color: white;
                 text-decoration: none;
+                font-size: 1.25rem;
             }
         }
         

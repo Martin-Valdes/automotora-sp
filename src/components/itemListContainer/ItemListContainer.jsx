@@ -19,12 +19,11 @@ const ItemListContainer = () => {
     },[])
         
     return(
-
          <div className="itemListContainer">
+            
             <ItemList cars = {car}/>
         </div>   
     )
-
 }
 
 export default ItemListContainer
