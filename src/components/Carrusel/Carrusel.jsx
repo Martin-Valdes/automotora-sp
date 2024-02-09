@@ -8,7 +8,7 @@ import './Carrusel.scss'
 const Carrusel = () => {
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 1100,
     slidesToShow: 3,
     slidesToScroll: 1,
     cssEase: "linear",
@@ -16,7 +16,8 @@ const Carrusel = () => {
     autoplay: true, // Activar la reproducción automática
     autoplaySpeed: 1,
     pauseOnHover: false,
-    variableWidth: true
+    variableWidth: true,
+    arrows: false
   };
 
   return (

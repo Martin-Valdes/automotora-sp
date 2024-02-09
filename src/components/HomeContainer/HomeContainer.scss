@@ -5,41 +5,79 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rgb(223, 240, 216);
+    background: linear-gradient(rgba(73, 85, 68, 0.75),rgba(5,7,12, 0.75)),
+    url("/img/background.webp");
+    background-size:100%;
     .homeContainer{
         height: 100vh;
         width: 80%;
-        background: linear-gradient(rgba(5,7,12, 0.75),rgba(5,7,12, 0.75)),
-        url("/img/background.webp");
-        background-size: cover;
+        padding-top: 5rem;
         display: flex;
-        justify-content: space-around;
-        .titleHome{
-            margin: 3.125rem 0 0 9.375rem;
-            width: 50%;
-            h2{
-            color: white;
-            font-size: 8.125rem;
-            
+        flex-direction: column;
+        .buttonNewContainer{
+            background-color: rgb(255, 255, 255);
+            width: 31.25rem;
+            border-radius: .625rem;
+            margin-bottom: 3.125rem;
+            .buttonNew{
+                font-size: 3.125rem;
+                height: 5rem;
             }
-            h3{
-            color: chartreuse;
-            font-size: 8.125rem;
-            margin-left: 4.375rem;
-            
-            }
-            .ulServices{
-                list-style-type: circle;
-                font-size: 1.875rem;
-                padding-top: 5rem;
-                margin-left: 6.25rem;
-                li{
-                    color: white;
-                }
-                
+            .buttonNew:hover{
+                color: rgb(255, 255, 255);
+                background-color: rgb(134, 180, 144);
+                border-color: #106cd5 ;
+                 
             }
         }
-        .carruselContainer{
+        .new{
+            display: flex;
+            .titleHome{
+                margin: 3.125rem 0 0 9.375rem;
+                width: 50%;
+                
+                h2{
+                color: white;
+                font-size: 8.125rem;
+                
+                }
+                h3{
+                color: rgb(105, 196, 13);
+                font-size: 8.125rem;
+                margin-left: 4.375rem;
+                
+                }
+                .sectionServices{
+                    display: flex;
+                    .ulServices{
+                        list-style-type: circle;
+                        font-size: 1.875rem;
+                        padding-top: 5rem;
+                        margin-left: 6.25rem;
+                        li{
+                            color: white;
+                        }
+                    } 
+                    .ulServices2{
+                        list-style-type: circle;
+                        font-size: 1.875rem;
+                        padding-top: 5rem;
+                        margin-left: 6.25rem;
+                        
+                        li{
+                            color: white;
+                        }
+                    }
+                }
+            } 
+        }
+        
+        
+
+    }
+    
+    .carruselContainer{
             margin-top: 5rem;
             display: flex;
             flex-direction: column;
@@ -48,56 +86,47 @@
                 text-align: center;
                 color: white;
                 font-size: 2.5rem;
-                background: linear-gradient(to right, #42fa51, #139102, #106cd5);
+                background: linear-gradient(to right, #2a502d, #139102, #0f6b26);
                 background-size: cover;
                 width: 18.75rem;
             }
             .cardContainer{
                 margin-top: 1.25rem;
                 width: 18rem;;
-                background-color: black;
-                color: white;
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
             }
             .buttonGo{
-                background-color: rgb(84, 219, 43);
+                background-color: rgb(172, 21, 21);
             }
-        }
     }
-    .icoWats{
-        width: 5rem;
-        height: 5rem;
-        margin: 6.25rem;
-        gap: 1.25rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        img{
-            margin: .625rem;
-        }
+    .carruselContainer2{
+        width: 70%;
     }
-    .carruselContainer{
-            width: 70%;
-        }
+        
     .backWash{
         display: flex;
-        
         flex-direction: column;
         align-items: center;
         width: 100%;
         height: 100vh;
-        background: linear-gradient(rgba(5,7,12, 0.75),rgba(5,7,12, 0.75)),
+        background: linear-gradient(rgba(135, 155, 127, 0.75),rgba(5,7,12, 0.75)),
         url("/img/backwash.webp");
         background-size: cover;
+        padding-top: 4.375rem;
         .titleWash{
             color: white;
             font-size: 8.125rem;
+        }
+        p{
+            font-size: 3.125rem;
+            color: white;
         }
         .horario{
             color: white;
             font-size: 5.625rem;
         }
         .buttonWash{
-            
             button{
                 width: 18.75rem;
                 color: white;
@@ -105,7 +134,223 @@
                 margin: .3125rem;
                 background-color: rgb(10, 10, 10);
             }
-            
+        }
+        .parrafoContacto{
+            color: rgb(255, 255, 255);
+            width: 100%;
+            height: 6.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 2.5rem;
+            .ubicacion{
+                font-size: 3.125rem;
+            }
+            .titleCtto{
+                display: flex;
+                flex-direction: row;
+                font-size: 3.125rem;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            .iconsCtto{
+                display: flex;
+                flex-direction: row;
+                gap: 1.875rem;
+                justify-content: center;
+            }
         }
     }
+}
+
+
+@media (max-width: 1024px){
+
+    .allPage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(223, 240, 216);
+        background: linear-gradient(rgba(73, 85, 68, 0.75),rgba(5,7,12, 0.75)),
+        url("/img/back1024.webp");
+        background-size:100%;
+        background-repeat: no-repeat;
+        .homeContainer{
+            padding: 0;
+            background: linear-gradient(rgba(73, 85, 68, 0.75),rgba(5,7,12, 0.75)),
+        url("/img/back1024.webp");
+            height: 100%;
+            width: 100%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            .buttonNewContainer{
+                background-color: rgb(21, 151, 9);
+                width: 18.75rem;
+                border-radius: .625rem;
+                margin-top: 1.25rem;
+                .buttonNew{
+                    font-size: 3.125rem;
+                    height: 5rem;
+                    
+                }
+                .buttonNew:hover{
+                    background-color: rgb(28, 184, 61);
+                    
+                }
+            }
+            .new{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.25rem;
+                .titleHome{
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    
+                    h2{
+                    color: white;
+                    font-size: 3.75rem;
+                    
+                    }
+                    h3{
+                    color: rgb(105, 196, 13);
+                    font-size: 3.75rem;
+                    margin: 0;
+                    
+                    }
+                    .sectionServices{
+                        
+                        .ulServices{
+                            list-style-type: circle;
+                            font-size: 1.5rem;
+                            padding-top: 0;
+                            margin: 0;
+                            li{
+                                color: white;
+                            }
+                            } 
+                            .ulServices2{
+                                list-style-type: circle;
+                                font-size: 1.5rem;
+                                padding-top: 0;
+                                padding-left: 1.875rem;
+                                margin: 0;
+                                
+                                li{
+                                    color: white;
+                                }
+                            }
+                    }
+               
+                } 
+            }
+            
+            .parrafoContacto{
+                color: rgb(255, 255, 255);
+                width: 100%;
+                height: 6.25rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .ubicacion{
+                    font-size: 1.875rem;
+                }
+                .titleCtto{
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 1.875rem;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    
+                    
+                }
+                .iconsCtto{
+                                display: flex;
+                                flex-direction: row;
+                                gap: 1.875rem;
+                                justify-content: center;
+                            }
+            }
+    
+        }
+        
+        .carruselContainer{
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: .625rem;
+                h6{
+                    text-align: center;
+                    color: white;
+                    font-size: 2.5rem;
+                    background: linear-gradient(to right, #2a502d, #139102, #0f6b26);
+                    background-size: cover;
+                    width: 18.75rem;
+                }
+                .cardContainer{
+                    margin-top: 1.25rem;
+                    width: 18rem;;
+                    background-color: black;
+                    color: white;
+                }
+                .buttonGo{
+                    background-color: rgb(172, 21, 21);
+                }
+                .cardContainer{
+                    margin: 1.25rem;
+
+                }
+        }
+        .carruselContainer2{
+            width: 100%;
+            height: 6.25rem ;
+            background-color: #0f6b26;
+            
+        }
+            
+        .backWash{
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 6.25rem;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(5,7,12, 0.75),rgba(5,7,12, 0.75)),
+            url("/img/backwash.webp");
+            background-size: cover;
+            padding-top: 3.125rem;
+            .titleWash{
+                color: white;
+                font-size: 2.8125rem;
+            }
+            p{
+                font-size: 1.875rem;
+                color: white;
+            }
+            .horario{
+                color: white;
+                font-size: 2.8125rem;
+            }
+            .buttonWash{
+                display: flex;
+                flex-direction: column;
+                button{
+                    width: 18.75rem;
+                    color: white;
+                    border-radius: .3125rem;
+                    margin: .3125rem;
+                    background-color: rgb(10, 10, 10);
+                }
+            }
+        }
+    }
+
+
 }

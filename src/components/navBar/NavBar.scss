@@ -1,29 +1,93 @@
 .navBar{
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    height: auto;
+    height: 6.25rem;
     align-items: center;
     padding: 1.25rem;
-    color: white;
-    img{
+    color: rgb(0, 0, 0);
+    margin: 0 6.25rem 0 6.25rem;
+    
+    .logoSp{
         width: 5rem;
         height: 5rem;
         border-radius: 3.125rem;
-        margin-left: 1.875rem ;
+        margin-left: 12.5rem;
     }
     .navUl{
         margin-right: 3.125rem;
         list-style: none;
         display: flex;
-        gap:20px;
+        gap:40px;
         li{
             a{ 
-                color: white;
+                color: rgb(255, 255, 255);
                 text-decoration: none;
                 font-size: 1.25rem;
             }
         }
+        
+    }
+    .icoWats{
+        width: 3.125rem;
+        height: 3.125rem;
+        margin-right: 18.75rem;
+        gap: 1.25rem;
+        display: flex;
+
+        img{
+            margin: .625rem;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .navBar{
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 12.5rem;
+        align-items: center;
+        padding: .625rem;
+        color: white;
+        margin: 0;
+        flex-direction: column;
+        .logoSp{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 3.125rem;
+            margin-left: 0;
+        }
+        .navUl{
+            margin-right: 0;
+            list-style: none;
+            display: flex;
+            gap:10px;
+            li{
+                a{ 
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1.25rem;
+                }
+            }
+            
+        }
+        
+            .icoWats{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin-right: 0;
+            gap: 1.25rem;
+            img{
+                width: 1.875rem;
+            }
+        }
+        
+        
         
     }
 }
