@@ -1,10 +1,18 @@
 import React from 'react';
 import Carrusel from '../Carrusel/Carrusel';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react'; 
+
+
 
 import './HomeContainer.scss'
+import { useAuth } from '../../Context/authContext';
 
 const HomeContainer = () =>{
+
+    const authContext = useAuth() 
+    console.log(authContext)
+
 
     return(
         <>
@@ -35,25 +43,25 @@ const HomeContainer = () =>{
                             <h6>Ultimos ingresos</h6>
                             <div className="card cardContainer">
                                 <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-                                <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                        <img src="./img/audi.jpg" class="d-block w-100" alt="..."/>
+                                <div id="carouselExampleControlsNoTouching" className="carousel slide" data-bs-touch="false">
+                                    <div className="carousel-inner">
+                                        <div className="carousel-item active">
+                                        <img src="./img/audi.jpg" className="d-block w-100" alt="..."/>
                                         </div>
-                                        <div class="carousel-item">
-                                        <img src="./img/bmw.jpg" class="d-block w-100" alt="..."/>
+                                        <div className="carousel-item">
+                                        <img src="./img/bmw.jpg" className="d-block w-100" alt="..."/>
                                         </div>
-                                        <div class="carousel-item">
-                                        <img src="./img/honda.jpg" class="d-block w-100" alt="..."/>
+                                        <div className="carousel-item">
+                                        <img src="./img/honda.jpg" className="d-block w-100" alt="..."/>
                                         </div>
                                     </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
                                     </button>
                                     </div>
                                 </div>
