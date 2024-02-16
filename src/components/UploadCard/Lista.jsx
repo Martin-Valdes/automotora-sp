@@ -42,6 +42,10 @@ const Lista = () => {
                     <td>{list.marca}</td>
                     <td>{list.modelo}</td>
                     <td><img height={150} width={200} src={list.img} alt={list.modelo} /></td>
+                    <td><img height={150} width={200} src={list.img} alt={list.modelo} /></td>
+                    <td><img height={150} width={200} src={list.img} alt={list.modelo} /></td>
+                    <td><img height={150} width={200} src={list.img} alt={list.modelo} /></td>
+                    <td><img height={150} width={200} src={list.img} alt={list.modelo} /></td>
                 </tr>
             )
             )

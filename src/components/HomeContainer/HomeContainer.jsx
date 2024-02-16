@@ -1,32 +1,23 @@
 import React from 'react';
 import Carrusel from '../Carrusel/Carrusel';
 import { Link, useNavigate } from 'react-router-dom';
-import { useContext } from 'react'; 
+
 
 
 
 
 import './HomeContainer.scss'
-import { useAuth } from '../../Context/AuthContext';
+
 
 
 const HomeContainer = () =>{
 
-    const {user, logout} = useAuth()
-    const navigate = useNavigate()
 
-
-    const handleLogout = async() =>{
-
-        await logout()
-        navigate('/login')
-
-    }
 
     return(
         <>
             <div className="homeContainer ">
-                <button onClick={handleLogout}>logout</button>
+                
                 
                 <div className='new'>
                     <div className='titleHome'>

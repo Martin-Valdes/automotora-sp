@@ -20,8 +20,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="allPage">
-        <NavBar/>
+        
         <AuthProvider>
+          <NavBar/>
           <Routes>
             <Route path="/" element = {<HomeContainer/>}/>
             <Route path="autos/autos" element ={<ItemListContainer/>} />
