@@ -1,6 +1,6 @@
 import React from 'react';
 import Carrusel from '../Carrusel/Carrusel';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 
 
@@ -40,7 +40,7 @@ const HomeContainer = () =>{
                         
                         <div className="carruselContainer">
                             <div className="buttonNewContainer d-grid gap-2 col-6 mx-auto">
-                            <button className="buttonNew btn " type="button">Buscar Usado</button>
+                            <Link to='/autos/autos'><button className="buttonNew btn " type="button">Buscar Usado</button></Link> 
                             </div>
                             <h6>Ultimos ingresos</h6>
                             <div className="card cardContainer">

@@ -7,7 +7,9 @@ export function ProtectedRoute ({children}) {
 
     const {user} = useAuth()
 
-    if (!user) return <Navigate to="/login"/>
+//aca autorizamos quien puede ingresar a la ruta protegida
+
+    if (user.email!='valdesmartin@gmail.com') return <Navigate to="/login"/>
 
   return <>{children}</>
 }

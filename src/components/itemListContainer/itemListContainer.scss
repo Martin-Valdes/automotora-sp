@@ -1,7 +1,9 @@
 .itemListContainer{
     background-color: white;
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 1.875rem;
 }

@@ -27,17 +27,18 @@ const NavBar = () =>{
                 <li><Link to = "financiacion">Financiacion</Link></li>
                 <li><Link to = "contacto">Contacto</Link></li>
             </ul>
-            <div className="iconsContainer">
-                <div className='icoWats'>
-                    <img src="/img/whatsapp_1_.webp" alt="" />
-                    <img src="/img/instagram.webp" alt="" />
-                    <img src="/img/facebook.webp" alt="" />
-                </div>
-            </div>
+            
             <div className='loginUserContainer'>
                 <button><Link to="/register">Registrarme</Link></button>
                 <button><Link to="/login">Login</Link></button>
-                <button onClick={handleLogout}>logout</button>                    
+                <button className={user.email==='valdesmartin@gmail.com' ? 'classBlock': 'classNone'} onClick={handleLogout}>logout</button> 
+                <div className="iconsContainer">
+                        <div className='icoWats'>
+                            <img src="/img/whatsapp_1_.webp" alt="" />
+                            <img src="/img/instagram.webp" alt="" />
+                            <img src="/img/facebook.webp" alt="" />
+                        </div>
+                </div>                      
             </div>
         </div>
     )

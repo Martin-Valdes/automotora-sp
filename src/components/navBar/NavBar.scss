@@ -3,20 +3,16 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 6.25rem;
+    height: 8.125rem;
     align-items: center;
     padding: 1.25rem;
     color: rgb(0, 0, 0);
-    margin: 0 6.25rem 0 6.25rem;
-    
     .logoSp{
-        width: 5rem;
-        height: 5rem;
-        border-radius: 3.125rem;
-        margin-left: 12.5rem;
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 50%;
     }
     .navUl{
-        margin-right: 3.125rem;
         list-style: none;
         display: flex;
         gap:40px;
@@ -27,17 +23,27 @@
                 font-size: 1.25rem;
             }
         }
-        
     }
-    .icoWats{
-        width: 3.125rem;
-        height: 3.125rem;
-        margin-right: 18.75rem;
-        gap: 1.25rem;
+    .loginUserContainer{
         display: flex;
-
-        img{
-            margin: .625rem;
+        flex-direction: column;
+        color: aliceblue;
+        font-size: 1rem;
+        .iconsContainer{
+            width: 9.375rem;
+            padding-top: .625rem;
+            .icoWats{
+            width: 1.875rem;
+            height: 1.875rem;
+            gap: 1.25rem;
+            display: flex;
+            }
+        }
+        .calssBlock{
+            display: block;
+        }
+        .classNone{
+            display: none;
         }
     }
 }
@@ -74,9 +80,8 @@
             }
             
         }
-        
             .icoWats{
-            width: 100%;
+            width: 50%;
             display: flex;
             align-items: center;
             flex-direction: row;
@@ -86,8 +91,5 @@
                 width: 1.875rem;
             }
         }
-        
-        
-        
     }
 }
