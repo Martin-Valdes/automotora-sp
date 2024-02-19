@@ -57,18 +57,17 @@ const Lista = () => {
                             <span className="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <div className="card-body">
-                        <h5 className="card-title">Marca: {list.marca}</h5>
-                        <p className="card-text">Modelo: {list.modelo}</p>
-                    </div>
                     <ul className="list-group list-group-flush">
+                        <li className=" list-group-item">Marca: {list.marca}</li>
+                        <li className="list-group-item">Modelo: {list.modelo}</li>
                         <li className="list-group-item">Kilometros: {list.kilometraje}</li>
-                        <li className="list-group-item">A second item</li>
+                        <li className="list-group-item">Año: </li>
                         <li className="list-group-item">A third item</li>
                     </ul>
                     <div className="card-body">
-                        <a href="#" className="card-link">Card link</a>
-                        <a href="#" className="card-link">Another link</a>
+                        <div class="buttonCard d-grid gap-2 col-6 mx-auto ">
+                            <button class="btn btn-primary bg-green-800 btn-lg" type="button">Mas Detalles</button>
+                        </div>
                     </div>
 
                 </div>

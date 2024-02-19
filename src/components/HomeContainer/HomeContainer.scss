@@ -19,8 +19,9 @@
             background-color: rgb(255, 255, 255);
             width: 18.75rem;
             border-radius: .625rem;
-            margin-bottom: 3.125rem;
+            margin-bottom: 3.125rem;text-align: center;
             .buttonNew{
+                
                 font-size: 3.125rem;
                 height: 5rem;
             }
@@ -28,13 +29,12 @@
                 color: rgb(255, 255, 255);
                 background-color: rgb(134, 180, 144);
                 border-color: #106cd5 ;
-                 
             }
         }
         .new{
             display: flex;
             .titleHome{
-                margin: 3.125rem 0 0 6.25rem;
+                margin: 1.875rem 0 0 6.25rem;
                 width: 50%;
                 
                 h2{
@@ -45,40 +45,35 @@
                 h3{
                 color: rgb(105, 196, 13);
                 font-size: 8.125rem;
-                margin-left: 4.375rem;
-                
-                }
-                .sectionServices{
-                    display: flex;
-                    .ulServices{
-                        list-style-type: circle;
-                        font-size: 1.875rem;
-                        padding-top: 5rem;
-                        margin-left: 6.25rem;
-                        li{
-                            color: white;
-                        }
-                    } 
-                    .ulServices2{
-                        list-style-type: circle;
-                        font-size: 1.875rem;
-                        padding-top: 5rem;
-                        margin-left: 6.25rem;
-                        
-                        li{
-                            color: white;
-                        }
-                    }
                 }
             } 
         }
-        
-        
-
     }
-    
+    .sectionServices{
+        display: flex;
+        padding-bottom: 1.25rem;
+        .ulServices{
+            list-style-type: disc;
+            font-size: 1.875rem;
+            
+            margin-left: 6.25rem;
+            li{
+                color: white;
+            }
+        } 
+        .ulServices2{
+            list-style-type: disc;
+            font-size: 1.875rem;
+            
+            margin-left: 6.25rem;
+            
+            li{
+                color: white;
+            }
+        }
+    }
     .carruselContainer{
-            margin-top: 5rem;
+            margin: 5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -122,10 +117,14 @@
             font-size: 3.125rem;
             color: white;
         }
-        .horario{
-            color: white;
-            font-size: 5.625rem;
+        .horarioContainer{
+            text-align: center;
+            .horario{
+                color: white;
+                font-size: 5.625rem;
+            }
         }
+        
         .buttonWash{
             button{
                 width: 18.75rem;
@@ -145,6 +144,8 @@
             padding-top: 2.5rem;
             .ubicacion{
                 font-size: 3.125rem;
+                text-align: center;
+                    padding-top: 1.25rem;
             }
             .titleCtto{
                 display: flex;
@@ -157,7 +158,12 @@
                 flex-direction: row;
                 gap: 1.875rem;
                 justify-content: center;
+                .imgWatsApp{
+                    width: 3.125rem;
+                   height: 3.125rem;
+                }
             }
+            
         }
     }
 }
@@ -227,7 +233,7 @@
                     
                     }
                     .sectionServices{
-                        
+                        width: 31.25rem;
                         .ulServices{
                             list-style-type: circle;
                             font-size: 1.5rem;
@@ -241,18 +247,43 @@
                                 list-style-type: circle;
                                 font-size: 1.5rem;
                                 padding-top: 0;
-                                padding-left: 1.875rem;
+                                
                                 margin: 0;
                                 
                                 li{
                                     color: white;
+                                    width: 37.5rem;
                                 }
                             }
                     }
                
                 } 
             }
-            
+            .sectionServices{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0;
+                gap: 1.875rem;
+                justify-content: center;
+                align-items: center;
+
+                .ulServices{
+                    display: flex;
+                    flex-wrap: wrap;
+                    list-style-type:disc;
+                    margin: 0;
+                    font-size: 1rem;
+                    gap: 1.25rem;
+                } 
+                .ulServices2{
+                    display: flex;
+                    flex-wrap: wrap;
+                    list-style-type: disc;
+                    font-size: 1rem;
+                    margin-left: 0;
+                    gap: 1.25rem;
+                }
+            }    
             .parrafoContacto{
                 color: rgb(255, 255, 255);
                 width: 100%;
@@ -287,6 +318,7 @@
                 flex-direction: column;
                 align-items: center;
                 margin-top: .625rem;
+                margin-bottom: 0;
                 h6{
                     text-align: center;
                     color: white;
@@ -333,11 +365,13 @@
             p{
                 font-size: 1.875rem;
                 color: white;
+            }.horarioContainer{
+                 .horario{
+                    color: white;
+                    font-size: 1.5625rem;
+                }
             }
-            .horario{
-                color: white;
-                font-size: 2.8125rem;
-            }
+           
             .buttonWash{
                 display: flex;
                 flex-direction: column;
@@ -347,6 +381,12 @@
                     border-radius: .3125rem;
                     margin: .3125rem;
                     background-color: rgb(10, 10, 10);
+                }
+            }
+            .parrafoContacto{
+                .ubicacion{
+                    text-align: center;
+                    padding-top: .625rem;
                 }
             }
         }

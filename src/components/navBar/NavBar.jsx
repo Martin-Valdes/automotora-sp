@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
 
 import "./NavBar.scss"
+import RedSocialIcons from '../RedSocialIcons/RedSocialIcons';
 
 const NavBar = () =>{
 
@@ -32,12 +33,9 @@ const NavBar = () =>{
                 <button><Link to="/register">Registrarme</Link></button>
                 <button><Link to="/login">Login</Link></button>
                 <button className={user.email==='valdesmartin@gmail.com' ? 'classBlock': 'classNone'} onClick={handleLogout}>logout</button> 
-                <div className="iconsContainer">
-                        <div className='icoWats'>
-                            <img src="/img/whatsapp_1_.webp" alt="" />
-                            <img src="/img/instagram.webp" alt="" />
-                            <img src="/img/facebook.webp" alt="" />
-                        </div>
+                <div className="icowats">    
+                    <RedSocialIcons />
+                    <Link to="https://www.instagram.com/spautos2024?igsh=MXM5cWRhZWxrYm8yZA==" ><img className='iconsRed' src="/img/instagram.webp" alt="" /></Link>     
                 </div>                      
             </div>
         </div>

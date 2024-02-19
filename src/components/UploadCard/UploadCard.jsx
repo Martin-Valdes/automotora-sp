@@ -100,7 +100,7 @@ const UploadCard = () => {
   }
 
   return (
-    <div className='card card-body'>
+    <div className='cardUpload card  card-body'>
       <h3>Agregar auto</h3>
       <form onSubmit={saveInfo}>
         <label>Marca</label>

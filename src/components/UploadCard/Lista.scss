@@ -1,15 +1,20 @@
 .galleryContainer{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1.875rem;
-    justify-content: center;
+    width: 80%;
     .card{
         width: 12.5rem;
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         .carousel-item{
         width: 12.5rem;
         height: 12.5rem;
-    }
+        }
+        .buttonCard{
+            width: 100%;
+        }
     }
     
 }

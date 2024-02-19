@@ -29,23 +29,33 @@
         flex-direction: column;
         color: aliceblue;
         font-size: 1rem;
-        .iconsContainer{
-            width: 9.375rem;
-            padding-top: .625rem;
-            .icoWats{
-            width: 1.875rem;
-            height: 1.875rem;
-            gap: 1.25rem;
-            display: flex;
-            }
-        }
+        
         .calssBlock{
             display: block;
         }
         .classNone{
             display: none;
         }
+        .icowats{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            margin-right: 0;
+            gap: 1.25rem;
+            width: 12.5rem;
+            .iconsRed{
+               width: 1.875rem;
+               height: 1.875rem;
+            }
+            .imgWatsApp{
+                width: 1.875rem;
+               height: 1.875rem;
+            }
+        }
     }
+    
 }
 
 @media (max-width: 768px){
@@ -54,7 +64,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        height: 12.5rem;
+        height: 13.4375rem;
         align-items: center;
         padding: .625rem;
         color: white;
