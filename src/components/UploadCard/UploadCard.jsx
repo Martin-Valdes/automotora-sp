@@ -1,15 +1,21 @@
 import React from 'react'
 import { getFirestore, collection, addDoc } from 'firebase/firestore'
-import {getStorage, ref, uploadBytes, getDownloadURL} from 'firebase/storage'
+import {getStorage, ref, uploadBytes, getDownloadURL, list} from 'firebase/storage'
 import appFirebase from '../../db/db'
+import Lista from './Lista'
+
 
 import './UploadCard.scss'
+
 
 const db = getFirestore(appFirebase)
 const storage = getStorage(appFirebase)
 
+
 const UploadCard = () => {
 
+ 
+  
   let urlImDesc;
   let urlImDesc1;
   let urlImDesc2;
@@ -21,11 +27,15 @@ const UploadCard = () => {
     const marca = e.target.marca.value;
     const modelo = e.target.modelo.value;
     const kilometraje = e.target.kilometraje.value;
+    const año = e.target.año.value;
+    const precio = e.target.año.value;
 
     const newCar = {
       marca: marca,
       modelo: modelo,
       kilometraje: kilometraje,
+      año: año,
+      precio: precio,
       img: urlImDesc,
       img1: urlImDesc1,
       img2: urlImDesc2,
@@ -43,12 +53,14 @@ const UploadCard = () => {
     e.target.marca.value ='';
     e.target.modelo.value = '';
     e.target.kilometraje.value = '';
+    e.target.año.value = '';
+    e.target.precio.value = '';
     e.target.file.value1 = '';
     e.target.file.value2 = '';
     e.target.file.value3 = '';
     e.target.file.value4 = '';
   }
-
+  
   const fileHandler = async (e)=>{
     const fileImg = e.target.files[0];
     const refFile = ref(storage, `documentos/${fileImg.name}` )
@@ -78,6 +90,7 @@ const UploadCard = () => {
     urlImDesc2 = await getDownloadURL (refFile2)
 
   }
+  
   const fileHandler3 = async (e)=>{
 
 
@@ -98,11 +111,12 @@ const UploadCard = () => {
 
     urlImDesc4 = await getDownloadURL (refFile4)
   }
+  
 
   return (
     <div className='cardUpload card  card-body'>
       <h3>Agregar auto</h3>
-      <form onSubmit={saveInfo}>
+      <form onSubmit={saveInfo} className='form cardUpload card  card-body'>
         <label>Marca</label>
         <div className='form-group'>
           <input type="text" placeholder='Ingresa la marca' id='marca' className='form-control mt-1' required/>
@@ -114,6 +128,14 @@ const UploadCard = () => {
         <label>Kilometraje</label>
         <div className='form-group'>
           <input type="text" placeholder='Ingresa el kilometraje' id='kilometraje' className='form-control mt-1' />
+        </div>
+        <label>Precio</label>
+        <div className='form-group'>
+          <input type="text" placeholder='Ingresa el Precio' id='precio' className='form-control mt-1' />
+        </div>
+        <label>año</label>
+        <div className='form-group'>
+          <input type="text" placeholder='Ingresa el año' id='año' className='form-control mt-1' />
         </div>
         <label>Agregar imagen</label>
           <input type="file" id='file' placeholder='add imagen' className='form-control' onChange={fileHandler}/>
@@ -128,6 +150,7 @@ const UploadCard = () => {
           
         <button className='btn btn-primary mt-3 form-control'>Guardar</button>
       </form>
+      <Lista />
     </div>
   )
 }

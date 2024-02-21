@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import appFirebase from "../../db/db"
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
+import { getFirestore, collection, getDocs,deleteDoc, doc } from 'firebase/firestore'
+import { useAuth } from '../../Context/AuthContext';
+
 
 import "./Lista.scss"
 
@@ -8,9 +10,25 @@ const db = getFirestore(appFirebase)
 
 
 const Lista = () => {
+    
+    const {user} = useAuth()
 
     const [gallery, setGalllery] = useState([])
     
+    
+
+    const deleteCar = async (documentoId) => {
+        console.log(documentoId)
+        try {
+          // Llama a deleteDoc para eliminar el documento
+          await deleteDoc(doc(db, "autos", documentoId));
+          console.log("Documento eliminado correctamente");
+        } catch (error) {
+          console.error("Error al eliminar documento: ", error);
+        }
+      };
+
+
     useEffect(() =>{
         const getGallery = async()=>{
             try{
@@ -24,6 +42,7 @@ const Lista = () => {
             }catch(error){
                 console.log(error)
             };
+
         }
         getGallery();
         
@@ -36,6 +55,7 @@ const Lista = () => {
         gallery.map((list)=>(
                 
                 <div key={list.id} className='card'>
+                    
                     <div id={`carousel-${list.id}`} className="carousel slide">
                         <div className="carousel-inner" >
                             <div  className="carousel-item active">
@@ -61,18 +81,24 @@ const Lista = () => {
                         <li className=" list-group-item">Marca: {list.marca}</li>
                         <li className="list-group-item">Modelo: {list.modelo}</li>
                         <li className="list-group-item">Kilometros: {list.kilometraje}</li>
-                        <li className="list-group-item">Año: </li>
-                        <li className="list-group-item">A third item</li>
+                        <li className="list-group-item">Año: {list.año}</li>
+                        <li className="list-group-item">Precio: {list.precio}</li>
                     </ul>
                     <div className="card-body">
-                        <div class="buttonCard d-grid gap-2 col-6 mx-auto ">
-                            <button class="btn btn-primary bg-green-800 btn-lg" type="button">Mas Detalles</button>
+                        <div className="buttonCard d-grid gap-2 col-6 mx-auto ">
+                            <button className="btn btn-primary bg-green-800 btn-lg" type="button">Mas Detalles</button>
                         </div>
                     </div>
-
+                    {user.emailVerified && 
+                    
+                    <div className="card-body">
+                        <div className="  buttonCard d-grid gap-2 col-6 mx-auto ">
+                            <button onClick={() => deleteCar(list.id)} className="btn papelera  btn-lg" type="button"><img src="./img/delete.png" alt="" /></button>
+                        </div>
+                    </div>
+                    
+                    }
                 </div>
-                
-                
                 ))
             }
     </div>

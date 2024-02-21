@@ -8,6 +8,7 @@ import RedSocialIcons from '../RedSocialIcons/RedSocialIcons';
 const NavBar = () =>{
 
     const {user, logout} = useAuth()
+    
     const navigate = useNavigate()
     //aca debemos tomar a user para generar las vistas
 
