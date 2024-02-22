@@ -13,6 +13,7 @@ import { BrowserRouter,Routes, Route, Navigate } from "react-router-dom"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import CarDetailContainer from "./components/CarDetailContainer/CarDetailContainer"
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="contacto" element = {<ContactoContainer/>}/>
             <Route path="register" element = {<Register/>}/>
             <Route path="login" element = {<Login/>}/>
+            <Route path="/cardetail/:id" element = {<CarDetailContainer/>}/> 
             <Route path="uploadCard" element={
                <ProtectedRoute>
                   <UploadCard/>

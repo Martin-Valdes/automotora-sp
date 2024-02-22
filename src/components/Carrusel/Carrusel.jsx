@@ -5,7 +5,14 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import './Carrusel.scss'
 
+
+
+
 const Carrusel = () => {
+
+
+
+
   const settings = {
     infinite: true,
     speed: 1100,
@@ -20,6 +27,7 @@ const Carrusel = () => {
     arrows: false
   };
 
+  
   return (
     
       <>

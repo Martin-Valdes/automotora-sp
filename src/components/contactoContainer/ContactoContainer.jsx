@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+
+
+import "./ContactoContainer.scss"
 
 const ContactoContainer = () => {
 
+    
+
     return(
 
-        <div><p>este es el contacto</p></div>
+        <div className='contactoContainer' >
+            <img className='imgCtto' src="./img/contacto.webp" alt="" />
+        </div>
     )
 }
 

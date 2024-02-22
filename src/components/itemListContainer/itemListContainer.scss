@@ -1,10 +1,37 @@
-.itemListContainer{
-    background-color: white;
-    width: 100%;
+.galleryContainer{
     display: flex;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 1.875rem;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    width: 80%;
+    margin: 1.875rem;
+    background-color: white;
+    border-radius: .625rem;
+    .card{
+        margin: 1.25rem;
+        width: 12.5rem;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        transition: 0.1s;
+        
+        .carousel-item{
+        width: 12.5rem;
+        height: 12.5rem;
+        }
+        .buttonCard{
+            width: 100%;
+        }
+        .papelera{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    }
+    .card:hover{
+        box-shadow: .3125rem .3125rem .3125rem .3125rem rgb(155, 155, 155);
+        scale: 1.01;
+
+    }
+    
 }

@@ -28,7 +28,11 @@ const UploadCard = () => {
     const modelo = e.target.modelo.value;
     const kilometraje = e.target.kilometraje.value;
     const año = e.target.año.value;
-    const precio = e.target.año.value;
+    const precio = e.target.precio.value;
+    const puertas = e.target.puertas.value;
+    const color = e.target.color.value;
+    const velocidades = e.target.velocidades.value;
+    const combustible = e.target.combustible.value;
 
     const newCar = {
       marca: marca,
@@ -36,6 +40,10 @@ const UploadCard = () => {
       kilometraje: kilometraje,
       año: año,
       precio: precio,
+      puertas: puertas,
+      color: color,
+      velocidades: velocidades,
+      combustible: combustible,
       img: urlImDesc,
       img1: urlImDesc1,
       img2: urlImDesc2,
@@ -55,10 +63,15 @@ const UploadCard = () => {
     e.target.kilometraje.value = '';
     e.target.año.value = '';
     e.target.precio.value = '';
-    e.target.file.value1 = '';
-    e.target.file.value2 = '';
-    e.target.file.value3 = '';
-    e.target.file.value4 = '';
+    e.target.color.value = '';
+    e.target.velocidades.value = '';
+    e.target.combustible.value = '';
+    e.target.puertas.value = '';
+    e.target.file.value = '';
+    e.target.file1.value = '';
+    e.target.file2.value = '';
+    e.target.file3.value = '';
+    e.target.file4.value = '';
   }
   
   const fileHandler = async (e)=>{
@@ -115,27 +128,43 @@ const UploadCard = () => {
 
   return (
     <div className='cardUpload card  card-body'>
-      <h3>Agregar auto</h3>
+      <h3>Nuevo auto</h3>
       <form onSubmit={saveInfo} className='form cardUpload card  card-body'>
         <label>Marca</label>
         <div className='form-group'>
-          <input type="text" placeholder='Ingresa la marca' id='marca' className='form-control mt-1' required/>
+          <input type="text" id='marca' className='form-control mt-1' required/>
         </div>
         <label>Modelo</label>
         <div className='form-group'>
-          <input type="text" placeholder='Ingresa el modelo' id='modelo' className='form-control mt-1' required/>
+          <input type="text"  id='modelo' className='form-control mt-1' required/>
         </div>
         <label>Kilometraje</label>
         <div className='form-group'>
-          <input type="text" placeholder='Ingresa el kilometraje' id='kilometraje' className='form-control mt-1' />
+          <input type="text" id='kilometraje' className='form-control mt-1' />
         </div>
         <label>Precio</label>
         <div className='form-group'>
-          <input type="text" placeholder='Ingresa el Precio' id='precio' className='form-control mt-1' />
+          <input type="text" id='precio' className='form-control mt-1' />
         </div>
-        <label>año</label>
+        <label>Año</label>
         <div className='form-group'>
-          <input type="text" placeholder='Ingresa el año' id='año' className='form-control mt-1' />
+          <input type="text" id='año' className='form-control mt-1' />
+        </div>
+        <label>Color</label>
+        <div className='form-group'>
+          <input type="text" id='color' className='form-control mt-1' />
+        </div>
+        <label>Cantidad de Puertas</label>
+        <div className='form-group'>
+          <input type="text"  id='puertas' className='form-control mt-1' />
+        </div>
+        <label>Combustible</label>
+        <div className='form-group'>
+          <input type="text"  id='combustible' className='form-control mt-1' />
+        </div>
+        <label>Cantidad de Velocidades</label>
+        <div className='form-group'>
+          <input type="text"  id='velocidades' className='form-control mt-1' />
         </div>
         <label>Agregar imagen</label>
           <input type="file" id='file' placeholder='add imagen' className='form-control' onChange={fileHandler}/>

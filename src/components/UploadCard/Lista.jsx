@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import appFirebase from "../../db/db"
 import { getFirestore, collection, getDocs,deleteDoc, doc } from 'firebase/firestore'
 import { useAuth } from '../../Context/AuthContext';
+import { Link } from 'react-router-dom'; 
 
 
 import "./Lista.scss"
@@ -18,7 +19,7 @@ const Lista = () => {
     
 
     const deleteCar = async (documentoId) => {
-        console.log(documentoId)
+        
         try {
           // Llama a deleteDoc para eliminar el documento
           await deleteDoc(doc(db, "autos", documentoId));
@@ -82,11 +83,16 @@ const Lista = () => {
                         <li className="list-group-item">Modelo: {list.modelo}</li>
                         <li className="list-group-item">Kilometros: {list.kilometraje}</li>
                         <li className="list-group-item">Año: {list.año}</li>
+                        <li className="list-group-item">Velocidades: {list.velocidades}</li>
+                        <li className="list-group-item">Color: {list.color}</li>
+                        <li className="list-group-item">Cantidad de puertas: {list.puertas}</li>
+                        <li className="list-group-item">Combustible: {list.combustible}</li>
                         <li className="list-group-item">Precio: {list.precio}</li>
+
                     </ul>
                     <div className="card-body">
                         <div className="buttonCard d-grid gap-2 col-6 mx-auto ">
-                            <button className="btn btn-primary bg-green-800 btn-lg" type="button">Mas Detalles</button>
+                            <button className="btn btn-primary bg-green-800 btn-lg" type="button"><Link to={`/cardetail/${list.id}`} >Mas Detalles</Link></button>
                         </div>
                     </div>
                     {user.emailVerified && 

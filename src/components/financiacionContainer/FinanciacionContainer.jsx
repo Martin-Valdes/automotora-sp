@@ -4,7 +4,9 @@ const FinanciacionContainer = () => {
 
     return(
 
-        <div><p>esto es financiacion</p></div>
+        <div>
+            <img src="./img/financiacion.webp" alt="" />
+        </div>
     )
 }
 

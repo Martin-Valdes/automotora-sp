@@ -26,10 +26,7 @@ const HomeContainer = () =>{
                         <h3>Permuta</h3>
                         <h3>Financiacion</h3>
                         <h3>Consignacion</h3>
-                        
-                        
-                        </div>
-                        
+                    </div>  
                         <div className="carruselContainer">
                             <div className="buttonNewContainer d-grid gap-2 col-6 mx-auto">
                             <button className="buttonNew btn " type="button"><Link to='/autos/autos'>Buscar Usado</Link> </button>
@@ -60,15 +57,12 @@ const HomeContainer = () =>{
                                     </div>
                                 </div>
                         </div>   
-                        
                     </div> 
-                    
                 </div>
                 <section className='sectionServices'>
                             <ul className='ulServices'>
                                 <li>Financiacion</li>
                                 <li>Compra</li>
-                                 
                             </ul>
                             <ul className='ulServices'>
                                 <li>Venta</li>
@@ -109,7 +103,7 @@ const HomeContainer = () =>{
                         <Link to="mailto:spautos2024@gmail.com" ><img src="/img/pngwing.com (4).png" alt="" /></Link>
                     </section>
                     <section className='ubicacion'>
-                        <p>Atlantida Km 45 / montevideo colon</p>
+                        <p>Atlantida Km 43 / montevideo colon</p>
                     </section>
                 </div>
             </div>
