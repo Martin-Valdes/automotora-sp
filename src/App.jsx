@@ -8,6 +8,7 @@ import Login from "./components/Login/Login"
 import UploadCard from "./components/UploadCard/UploadCard"
 import {ProtectedRoute} from "./components/ProtectedRoute/ProtectedRoute"
 import  {AuthProvider}  from "./Context/AuthContext"
+import { GalleryCars} from "./Context/GalleryContext"
 
 import { BrowserRouter,Routes, Route, Navigate } from "react-router-dom"
 
@@ -23,6 +24,7 @@ function App() {
       <div className="allPage">
         
         <AuthProvider>
+        <GalleryCars>
           <NavBar/>
           <Routes>
             <Route path="/" element = {<HomeContainer/>}/>
@@ -39,6 +41,7 @@ function App() {
             }
             />
           </Routes>
+        </GalleryCars>
         </AuthProvider>
       </div>
     </BrowserRouter>

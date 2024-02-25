@@ -128,56 +128,56 @@ const UploadCard = () => {
 
   return (
     <div className='cardUpload card  card-body'>
-      <h3>Nuevo auto</h3>
+      <h3>Nuevo ingreso</h3>
       <form onSubmit={saveInfo} className='form cardUpload card  card-body'>
         <label>Marca</label>
-        <div className='form-group'>
+        <div className='form-group '>
           <input type="text" id='marca' className='form-control mt-1' required/>
         </div>
         <label>Modelo</label>
-        <div className='form-group'>
-          <input type="text"  id='modelo' className='form-control mt-1' required/>
+        <div className='form-group '>
+          <input type="text"  id='modelo ' className='form-control mt-1' required/>
         </div>
         <label>Kilometraje</label>
         <div className='form-group'>
-          <input type="text" id='kilometraje' className='form-control mt-1' />
+          <input type="text" id='kilometraje' className='form-control mt-1' required/>
         </div>
         <label>Precio</label>
         <div className='form-group'>
-          <input type="text" id='precio' className='form-control mt-1' />
+          <input type="text" id='precio' className='form-control mt-1' required/>
         </div>
         <label>Año</label>
         <div className='form-group'>
-          <input type="text" id='año' className='form-control mt-1' />
+          <input type="text" id='año' className='form-control mt-1' required/>
         </div>
         <label>Color</label>
         <div className='form-group'>
-          <input type="text" id='color' className='form-control mt-1' />
+          <input type="text" id='color' className='form-control mt-1' required/>
         </div>
         <label>Cantidad de Puertas</label>
         <div className='form-group'>
-          <input type="text"  id='puertas' className='form-control mt-1' />
+          <input type="text"  id='puertas' className='form-control mt-1' required/>
         </div>
         <label>Combustible</label>
         <div className='form-group'>
-          <input type="text"  id='combustible' className='form-control mt-1' />
+          <input type="text"  id='combustible' className='form-control mt-1' required/>
         </div>
         <label>Cantidad de Velocidades</label>
         <div className='form-group'>
-          <input type="text"  id='velocidades' className='form-control mt-1' />
+          <input type="text"  id='velocidades' className='form-control mt-1' required/>
         </div>
         <label>Agregar imagen</label>
-          <input type="file" id='file' placeholder='add imagen' className='form-control' onChange={fileHandler}/>
-          <label>Agregar imagen</label>
-          <input type="file" id='file1' placeholder='add imagen' className='form-control' onChange={fileHandler1}/>
-          <label>Agregar imagen</label>
-          <input type="file" id='file2' placeholder='add imagen' className='form-control' onChange={fileHandler2}/>
-          <label>Agregar imagen</label>
-          <input type="file" id='file3' placeholder='add imagen' className='form-control' onChange={fileHandler3}/>
-          <label>Agregar imagen</label>
-          <input type="file" id='file4' placeholder='add imagen' className='form-control' onChange={fileHandler4}/>
+          <input type="file" id='file' placeholder='add imagen' className='form-control mt-4' onChange={fileHandler}/>
           
-        <button className='btn btn-primary mt-3 form-control'>Guardar</button>
+          <input type="file" id='file1' placeholder='add imagen' className='form-control mt-4' onChange={fileHandler1}/>
+          
+          <input type="file" id='file2' placeholder='add imagen' className='form-control mt-4' onChange={fileHandler2}/>
+         
+          <input type="file" id='file3' placeholder='add imagen' className='form-control mt-4' onChange={fileHandler3}/>
+          
+          <input type="file" id='file4' placeholder='add imagen' className='form-control mt-4' onChange={fileHandler4}/>
+          
+        <button className='btn btn-primary mt-3 form-control'>Publicar</button>
       </form>
       <Lista />
     </div>

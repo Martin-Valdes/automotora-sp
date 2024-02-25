@@ -7,29 +7,33 @@
     min-height: calc(100vh - 5.3125rem - 10.625rem);
     background: linear-gradient(rgba(73, 85, 68, 0.75),rgba(5,7,12, 0.75)),
     url("/img/background.webp");
-    background-size:cover;
-    background-repeat: no-repeat;
+    background-size:contain;
+    background-repeat:repeat-y;
+    background-position: center;
     .homeContainer{
         height: 100%;
         min-height: calc(100vh - 5.3125rem - 10.625rem);
         width: 100%;
-        padding-top: 5rem;
+        
         display: flex;
         flex-direction: column;
         .buttonNewContainer{
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(252, 255, 250);
             width: 18.75rem;
             border-radius: .625rem;
-            margin-bottom: 3.125rem;text-align: center;
+            margin-top: 1.25rem;
+            text-align: center;
             .buttonNew{
                 
                 font-size: 3.125rem;
                 height: 5rem;
+                transition: 0.3s;
             }
             .buttonNew:hover{
                 color: rgb(255, 255, 255);
-                background-color: rgb(134, 180, 144);
+                background-color: rgb(0, 0, 0);
                 border-color: #106cd5 ;
+                scale: 1.1;
             }
         }
         .new{
@@ -45,7 +49,7 @@
                 }
                 h3{
                 color: rgb(105, 196, 13);
-                font-size: 8.125rem;
+                font-size: 5.625rem;
                 }
             } 
         }
@@ -74,7 +78,7 @@
         }
     }
     .carruselContainer{
-            margin: 5rem;
+            margin-top: 3.125rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -82,18 +86,35 @@
                 text-align: center;
                 color: white;
                 font-size: 2.5rem;
-                background: linear-gradient(to right, #2a502d, #139102, #0f6b26);
+                background-color: black;
                 background-size: cover;
-                width: 18.75rem;
+                width: 25rem;
+                border-radius: .3125rem;
             }
             .cardContainer{
                 margin-top: 1.25rem;
-                width: 18rem;;
+                width: 31.25rem;
                 background-color: rgb(255, 255, 255);
                 color: rgb(0, 0, 0);
             }
             .buttonGo{
                 background-color: rgb(172, 21, 21);
+            }
+            .containerCarrusel{
+                margin: 1.25rem;
+                padding-top: 1.25rem;
+                width: 25rem;
+                .containerImg{
+                    width: 25rem;
+                    .imgImg{
+                        width: 25rem;
+                        img{
+                            width: 25rem;
+                        }
+                        
+                        
+                    }
+                }
             }
     }
     .carruselContainer2{

@@ -5,6 +5,7 @@ import { useAuth } from '../../Context/AuthContext';
 import { Link } from 'react-router-dom'; 
 
 
+
 import "./Lista.scss"
 
 const db = getFirestore(appFirebase)
@@ -47,8 +48,8 @@ const Lista = () => {
         }
         getGallery();
         
-    },[gallery,])
-
+    },[])
+console.log(gallery)
   return (
     <div className='galleryContainer'>
         

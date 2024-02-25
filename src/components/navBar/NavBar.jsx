@@ -31,13 +31,13 @@ const NavBar = () =>{
             </ul>
             
             <div className='loginUserContainer'>
-                <button><Link to="/register">Registrarme</Link></button>
-                <button><Link to="/login">Login</Link></button>
-                <button className={user.email==='valdesmartin@gmail.com' ? 'classBlock': 'classNone'} onClick={handleLogout}>logout</button> 
                 <div className="icowats">    
                     <RedSocialIcons />
                     <Link to="https://www.instagram.com/spautos2024?igsh=MXM5cWRhZWxrYm8yZA==" ><img className='iconsRed' src="/img/instagram.webp" alt="" /></Link>     
-                </div>                      
+                </div>  
+                <button><Link to="/login">Login</Link></button>
+                <button className={user.email==='valdesmartin@gmail.com' ? 'classBlock': 'classNone'} onClick={handleLogout}>logout</button> 
+                                    
             </div>
         </div>
     )

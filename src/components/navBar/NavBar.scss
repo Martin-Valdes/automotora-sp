@@ -26,10 +26,10 @@
     }
     .loginUserContainer{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         color: aliceblue;
         font-size: 1rem;
-        
+        gap: .625rem;
         .calssBlock{
             display: block;
         }
@@ -44,7 +44,8 @@
             flex-direction: row;
             margin-right: 0;
             gap: 1.25rem;
-            width: 12.5rem;
+            
+            
             .iconsRed{
                width: 1.875rem;
                height: 1.875rem;

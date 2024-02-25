@@ -5,8 +5,6 @@ import "./ContactoContainer.scss"
 
 const ContactoContainer = () => {
 
-    
-
     return(
 
         <div className='contactoContainer' >

@@ -2,7 +2,7 @@ import Item from "../Item/Item"
 import "./ItemList.scss"
 
 const ItemList = ({cars}) =>{
-    console.log(cars)
+    
     return (
         <div className="itemList">
             {
