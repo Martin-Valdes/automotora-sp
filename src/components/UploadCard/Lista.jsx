@@ -93,7 +93,7 @@ console.log(gallery)
                     </ul>
                     <div className="card-body">
                         <div className="buttonCard d-grid gap-2 col-6 mx-auto ">
-                            <button className="btn btn-primary bg-green-800 btn-lg" type="button"><Link to={`/cardetail/${list.id}`} >Mas Detalles</Link></button>
+                            <button className="btn btn-primary bg-green-800 btn-lg" type="button"><Link to={`/cardetail/${list.id}` } target="_blank" rel="noopener noreferrer" >Mas Detalles</Link></button>
                         </div>
                     </div>
                     {user.emailVerified && 

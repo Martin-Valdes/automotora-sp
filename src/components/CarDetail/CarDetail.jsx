@@ -54,17 +54,18 @@ const CarDetail = ({car}) => {
                 </ul>
                 <div className="card-footer">
                     <div className='iconsDetail'>
-                    <p>Contactanos</p>
+                        <p>Contactanos</p>
+                        <p className='numberClass'>(+598) 095 094 096</p>
                     <section className='iconsCtto'>
-                            <RedSocialIcons/>
+                            <RedSocialIcons props = {car.id}/>
                             <Link to="mailto:spautos2024@gmail.com" ><img className='icoEmail' src="/img/pngwing.com (4).png" alt="" /></Link>
                     </section>
-                    <p>(+598) 095 094 096</p>
-                </div>
-                </div>
-                
+                    
+                    </div>
+                </div> 
             </div>
         </div>
+            
             <ItemListContainer/>
     </div>
   )

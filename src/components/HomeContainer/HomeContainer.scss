@@ -13,7 +13,7 @@
     .homeContainer{
         height: 100%;
         min-height: calc(100vh - 5.3125rem - 10.625rem);
-        width: 100%;
+        width: 85%;
         
         display: flex;
         flex-direction: column;
@@ -21,7 +21,7 @@
             background-color: rgb(252, 255, 250);
             width: 18.75rem;
             border-radius: .625rem;
-            margin-top: 1.25rem;
+            margin: 1.25rem;
             text-align: center;
             .buttonNew{
                 
@@ -93,9 +93,18 @@
             }
             .cardContainer{
                 margin-top: 1.25rem;
-                width: 31.25rem;
+                width: 21.875rem;
                 background-color: rgb(255, 255, 255);
                 color: rgb(0, 0, 0);
+                .containerImg{
+                    width: 21.875rem;
+                    .imgImg{
+                        width: 21.875rem;
+                        img{
+                            width: 21.875rem;
+                        }
+                    }
+                }
             }
             .buttonGo{
                 background-color: rgb(172, 21, 21);
@@ -104,17 +113,7 @@
                 margin: 1.25rem;
                 padding-top: 1.25rem;
                 width: 25rem;
-                .containerImg{
-                    width: 25rem;
-                    .imgImg{
-                        width: 25rem;
-                        img{
-                            width: 25rem;
-                        }
-                        
-                        
-                    }
-                }
+                
             }
     }
     .carruselContainer2{
@@ -352,17 +351,34 @@
                     width: 18.75rem;
                 }
                 .cardContainer{
+                    
                     margin-top: 1.25rem;
-                    width: 18rem;;
+                    width: 18.75rem;
                     background-color: black;
                     color: white;
+                    align-items: center;
+
+                    .containerImg{
+                        width: 18.75rem;
+                        .imgImg{
+                            width: 18.75rem;
+                            img{
+                                width: 18.75rem;
+                            }
+                            
+                            
+                        }
+                    }
                 }
                 .buttonGo{
                     background-color: rgb(172, 21, 21);
                 }
-                .cardContainer{
-                    margin: 1.25rem;
-
+                
+                .containerCarrusel{
+                    
+                    padding-top: .625rem;
+                    width: 12.5rem;
+                    
                 }
         }
         .carruselContainer2{
@@ -400,7 +416,8 @@
                 display: flex;
                 flex-direction: column;
                 button{
-                    width: 18.75rem;
+                    width: 15.625rem;
+                    height: 2.5rem;
                     color: white;
                     border-radius: .3125rem;
                     margin: .3125rem;
@@ -408,6 +425,13 @@
                 }
             }
             .parrafoContacto{
+                display: flex;
+                .titleCtto{
+                    font-size: 1.75rem;
+                }
+                p{
+                    font-size: 1.5625rem;
+                }
                 .ubicacion{
                     text-align: center;
                     padding-top: .625rem;

@@ -1,20 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+
 
 import './RedSocialIcons.scss'
 
 
 
-const RedSocialIcons = () => {
+const RedSocialIcons = (car) => {
 
+    
+    console.log(car)
     const phoneNumber = '+59899275858'; 
-    const message = "hola";
+    const message = {car};
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     const imageUrl = "/img/whatsapp_1_.webp"; 
 
   return (
-    <Link href={whatsappUrl}>
+    <Link to={whatsappUrl}>
       <img className='imgWatsApp' src={imageUrl}/>
     </Link>
   )

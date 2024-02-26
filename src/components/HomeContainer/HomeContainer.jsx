@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import Carrusel from '../Carrusel/Carrusel';
 import { Link} from 'react-router-dom';
 import RedSocialIcons from '../RedSocialIcons/RedSocialIcons';
@@ -9,12 +8,7 @@ import './HomeContainer.scss'
 const HomeContainer = () =>{
 
     const {allCars} = useData()
-    let img = [];
-for (let i = 0; i < allCars.length; i++) {
-    const objeto = allCars[i];
-    img.push(objeto.img);
-    
-}
+ 
 
     return(
         <>
@@ -29,31 +23,32 @@ for (let i = 0; i < allCars.length; i++) {
                         <h3>Consignacion</h3>
                     </div>  
 
-                                    <div className="carruselContainer">
-                                        <h6>Ultimos ingresos</h6>
-                                        <div id="carouselExampleSlidesOnly" class="containerCarrusel carousel slide" data-bs-ride="carousel">
-                                            <div className="containerImg carousel-inner">
-                                                <div className="imgImg carousel-item active">
-                                                <img src={img[1]} class="d-block " alt="..."/>
-                                                </div>
-                                                <div className="imgImg carousel-item active">
-                                                <img src={img[0]} class="d-block " alt="..."/>
-                                                </div>
-                                                <div className="imgImg carousel-item active">
-                                                <img src={img[2]} class="d-block " alt="..."/>
-                                                </div>
-                                                <div className="imgImg carousel-item active">
-                                                <img src={img[3]} class="d-block " alt="..."/>
-                                                </div>
-                                                <div className="imgImg carousel-item active">
-                                                <img src={img[4]} class="d-block " alt="..."/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="buttonNewContainer d-grid gap-2 col-6 mx-auto">
-                                            <button className="buttonNew btn " type="button"><Link to='/autos/autos'>Buscar Usado</Link> </button>
-                                        </div>
-                                    </div> 
+                    <div className="carruselContainer">
+                <h6>Últimos ingresos</h6>
+                <div id="carouselExampleSlidesOnly" className="cardContainer carousel slide" data-bs-ride="carousel">
+        <div className="containerImg carousel-inner">
+          {allCars.map((car, index) => (
+            <div className={`imgImg carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+              <img src={car.img} className="img d-block w-100" alt={`Slide ${index}`} />
+            </div>
+          ))}
+        </div>
+        <a className="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </a>
+        
+      </div>
+                <div className="buttonNewContainer d-grid gap-2 col-6 mx-auto">
+                    <button className="buttonNew btn" type="button">
+                        <Link to="/autos/autos">Buscar Usado</Link>
+                    </button>
+                </div>
+            </div>
                     
                 </div>
                 <section className='sectionServices'>
